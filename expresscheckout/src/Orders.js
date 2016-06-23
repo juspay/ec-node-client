@@ -31,7 +31,7 @@ module.exports = {
 
         util.request(method,url,parameters,function(response,error){callback(response,error)});
     },
-    get_status : function(parameters,callback){
+    get_status :function(parameters,callback){
         method = 'GET';
         url = '/order/status';
         required_args = ['order_id'];
@@ -47,8 +47,7 @@ module.exports = {
                 }
             }
 
-        util.request(method,url,parameters,function(response){callback(response)});
-
+        util.request(method,url,parameters,function(response,error){callback(response,error)});
     },
     list : function(parameters, callback){
         if (typeof parameters === 'function') {
@@ -85,7 +84,7 @@ module.exports = {
                 }
             }
 
-        util.request(method,url,parameters,function(response){callback(response)});
+        util.request(method,url,parameters,function(response,error){callback(response,error)});
     },
     refund : function(parameters,callback){
         method = 'POST';
@@ -103,6 +102,6 @@ module.exports = {
                 }
             }
 
-        util.request(method,url,parameters,function(response){callback(response)});
+        util.request(method,url,parameters,function(response,error){callback(response,error)});
     }
 };

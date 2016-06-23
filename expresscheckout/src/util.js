@@ -12,7 +12,7 @@ module.exports = {
         else if(config.environment=='staging')
             server =  'https://sandbox.juspay.in';
         if (method == 'GET') {
-            unirest.get(server + url).auth(config.api_key,'').send(parameters).end(function (resp) {
+            unirest.get(server + url).auth(config.api_key,'').query(parameters).end(function (resp) {
                 if((resp.status>=200&&resp.status<300)&&resp.body['status']!='ERROR'){
                     callback(resp.body,null);
                 }
@@ -31,25 +31,6 @@ module.exports = {
                 }
             })
         }
-    },
-    get_arg: function (parameters,param,callback) {
-        var value = null;
-        if(parameters.hasOwnProperty(param)){
-            value = parameters[param];
-        }
-        callback(value)
-    },
-    check_param: function(parameters,param,callback) {
-        var flag = false;
-        for (var key  in  parameters) {
-            if(parameters.hasOwnProperty(key)) {
-                if (key.startsWith(param)) {
-                    flag = true
-                }
-            }
-        }
-        callback(flag);
     }
-
 };
 

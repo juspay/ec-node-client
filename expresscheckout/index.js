@@ -1,6 +1,4 @@
-require('./Cards');
-require('./Orders');
-require('./Payments');
-require('./config');
-require('./util');
-require('./Test');
+Cards = require('./dist/Cards');
+Orders =require('./dist/Orders');
+Payments = require('./dist/Payments');
+config = require('./dist/config');
