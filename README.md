@@ -1,5 +1,5 @@
 # ExpressCheckout Node.js Client
-Easy way to integrate with ExpressCheckout for your node.js application.
+Easy way to integrate with ExpressCheckout from your node.js application.
 
 ## Installation
 
