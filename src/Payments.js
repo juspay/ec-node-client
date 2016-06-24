@@ -43,7 +43,7 @@ module.exports = {
                 }
             }
 
-        util.request(method,url,parameters,function(response){callback(response)});
+        util.request(method,url,parameters,function(response,error){callback(response,error)});
 
     }
 };

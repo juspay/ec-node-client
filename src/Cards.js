@@ -38,13 +38,14 @@ module.exports = {
                 }
             }
 
-        util.request(method,url,parameters,function(response){callback(response)});
+        util.request(method,url,parameters,function(response,error){callback(response,error)});
 
     },
     delete : function(parameters,callback){
         method = 'POST';
         url = '/card/delete';
         required_args = ['card_token'];
+        
         all_args = ['card_token'];
         for( var param in required_args )
             if(parameters.hasOwnProperty(required_args[param]) == false)
@@ -57,6 +58,6 @@ module.exports = {
                 }
             }
 
-        util.request(method,url,parameters,function(response){callback(response)});
+        util.request(method,url,parameters,function(response,error){callback(response,error)});
     }
 };
