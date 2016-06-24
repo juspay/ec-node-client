@@ -5,7 +5,7 @@ Easy way to integrate with ExpressCheckout from your node.js application.
 
 Install from npm:
 
-`sudo npm install expresscheckout`
+`npm install expresscheckout`
 
 ## Usage
 
