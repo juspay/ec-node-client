@@ -11,7 +11,7 @@ test = require('unit.js');
 config.api_key = '4168A8A476B84DBCAF409C24F379BAC5';
 var timestamp = Math.round((new Date()).getTime() / 1000);
 
-/*
+
 //Test for Orders
 Orders.create({order_id:timestamp,amount: 700},function(response,error){console.log(response);test.value(error).is(null);
     Orders.get_status({order_id:timestamp},function(response,error){console.log(response);test.value(error).is(null);});});
@@ -26,7 +26,7 @@ Cards.add({merchant_id:'shreyas', customer_id:"user1", customer_email:'abc@xyz.c
     Cards.delete({card_token:token},function(response,error){console.log(response);test.value(error).is(null);});
 });
 Cards.list({customer_id:"user"},function(response,error){console.log(response);test.value(error).is(null);});
- */
+
 //Test for Payments
 Payments.create_card_payment({order_id:1465893617,
         merchant_id:'juspay_recharge',
