@@ -6,7 +6,6 @@ Orders =require('./Orders');
 Payments = require('./Payments');
 config = require('./config');
 
-config = require('./config');
 test = require('unit.js');
 
 config.api_key = '4168A8A476B84DBCAF409C24F379BAC5';
